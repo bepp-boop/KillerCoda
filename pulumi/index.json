@@ -9,11 +9,11 @@
         "steps": 
         [{
             "title":"Steps 1",
-            "text":"steps1.md"
+            "text":"step1.md"
         },
         {
             "title":"Steps 2",
-            "text":"steps2.md"
+            "text":"step2.md"
         }
     ],
         "finish": 
