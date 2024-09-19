@@ -1,0 +1,28 @@
+{
+    "title": "Pulumi Lab",
+    "description": "This is a simple Pulumi lab",
+    "details": {
+        "intro": {
+            "title":"Introduction",
+            "text":"intro.md"
+        },
+        "steps": 
+        [{
+            "title":"Steps 1",
+            "text":"steps.md"
+        },
+        {
+            "title":"Steps 2",
+            "text":"steps2.md"
+        }
+    ],
+        "finish": 
+        {
+            "title":"Finish",
+            "text":"finish.md"
+        }
+    },
+    "backend": {
+      "imageid": "ubuntu"
+    }
+  }
