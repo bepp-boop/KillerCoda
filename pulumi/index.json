@@ -8,7 +8,7 @@
         },
         "steps": 
         [{
-            "title":"Steps 1",
+            "title":"Download Pulumi",
             "text":"step1.md"
         },
         {
