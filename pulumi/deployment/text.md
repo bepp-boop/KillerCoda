@@ -1,5 +1,6 @@
 Let's create a simple Pulumi progam that running ngix on port 8000 on the system.
 
+
 `vi main.py`{{copy}}
 
 We will used Python to write the Pulumi program. Also we will use the pulumi_docker package to create the Docker image and container.

@@ -14,6 +14,10 @@
             "verify": ""
         },
         {
+            "title":"Setting up Pulumi",
+            "text":"setting_up/text.md"
+        },
+        {
             "title":"Deploy a Container",
             "text":"deployment/text.md",
             "verify": ""
