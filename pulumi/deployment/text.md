@@ -1,42 +1,39 @@
 We will used Python to write the Pulumi program. Also we will use the pulumi_docker package to create the Docker image and container.
 
+We would need to generate a new Pulumi project using the following command.
+
+`pulumi new python`{{exec}}
+
+This will create a new Pulumi project with the following files:
+
+- `Pulumi.yaml`: This file contains the project configuration.
+
+- `Pulumi.py`: This file contains the Pulumi program.
+
+- `requirements.txt`: This file contains the Python dependencies.
+
+We will install the pulumi_docker package using the following command.
+
 `pip install pulumi_docker`{{exec}}
 
-It said that there are some conflict with the package. We will install the package using the following command.
+Next, we will write the Pulumi program in the `Pulumi.py` file. The program will create a Docker image and container running an nginx server. The nginx server will be accessible on port 8000.
 
-`pip install semver~=2.13`{{exec}}
-
-Let's create a simple Pulumi progam that running ngix on port 8000 on the system. So just make a new python file and write the following code.
-
-```
+```python
 import pulumi
-from pulumi_docker import Image, Container, DockerBuild
+import pulumi_docker as docker
 
-nginx_image = Image("nginxImage",
-    image_name="nginx:latest",
-    build=DockerBuild(context=".")
-)
-
-# Create the Docker container
-nginx_container = Container("nginxContainer",
-    image=nginx_image.image_name,
-    name="tutorial",
+# Define the nginx container
+nginx_container = docker.Container(
+    'nginx-container',
+    image='nginx:latest',
     ports=[{
-        "internal": 80,
-        "external": 8000,
+        'internal': 80,
+        'external': 8000
     }]
 )
 
-# Export the container name and port as outputs
-pulumi.export("container_name", nginx_container.name)
-pulumi.export("container_port", nginx_container.ports) 
-```{{copy}}
-
-We should validate the program before running it. Run the following command to validate the program. This automatically download and configure the necessary providers
-
-`pulumi preview`{{exec}}
-
-If the validation is successful, we can run the program using the following command.
+pulumi.export('nginx_ip', nginx_container.ports[0].apply(lambda p: p['host']))
+```
 
 `pulumi up`{{exec}}
 
@@ -48,10 +45,4 @@ docker ps
 curl 127.0.0.1:8000
 ```
 
-You can view the file to see the objects that Pulumi created.
 
-`cat Pulumi.dev.yaml`{{exec}}
-
-Now let us clean up the resources by running the following command.
-
-`pulumi destroy`{{exec}}
