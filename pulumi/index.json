@@ -15,7 +15,7 @@
         },
         {
             "title":"Deploy a Container",
-            "text":"deploy/text.md",
+            "text":"deployment/text.md",
             "verify": ""
         }
     ],
