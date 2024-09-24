@@ -21,7 +21,7 @@
             "title":"Deploy a Container",
             "text":"deployment/text.md",
             "verify": ""
-        }
+        },
         {
             "title":"Multiple Container Deployments",
             "text":"extending_deployment/text.md",
