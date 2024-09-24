@@ -3,6 +3,10 @@ To install Pulumi using a script, you can use the following command:
 
 `curl -fsSL https://get.pulumi.com | sh`{{exec}}
 
+Restart your terminal to ensure the pulumi command is available.
+
+`exec $SHELL`{{exec}}
+
 We can confirm installation by running on new tab:
 
 `pulumi version`{{exec}}

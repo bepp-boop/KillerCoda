@@ -4,22 +4,25 @@
     "details": {
         "intro": {
             "title":"Introduction",
-            "text":"intro.md"
+            "text":"intro/text.md",
+            "verify":""
         },
         "steps": 
         [{
             "title":"Download Pulumi",
-            "text":"step1.md"
+            "text":"install/install_command.md",
+            "verify": ""
         },
         {
             "title":"Steps 2",
-            "text":"step2.md"
+            "text":"step2.md",
+            "verify": ""
         }
     ],
         "finish": 
         {
             "title":"Finish",
-            "text":"finish.md"
+            "text":"finish/conclusion.md"
         }
     },
     "backend": {
