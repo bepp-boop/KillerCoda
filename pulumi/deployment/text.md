@@ -31,21 +31,28 @@ We will install the pulumi_docker package using the following command.
 
 Next, we will write the Pulumi program in the `Pulumi.py` file. The program will create a Docker image and container running an nginx server. The nginx server will be accessible on port 8000.
 
-```python
+```
 import pulumi
 import pulumi_docker as docker
 
-# Define the nginx container
-nginx_container = docker.Container(
-    'nginx-container',
-    image='nginx:latest',
-    ports=[{
-        'internal': 80,
-        'external': 8000
-    }]
+# Use the official Nginx Docker image from Docker Hub
+nginx_image = docker.RemoteImage("nginx_image",
+    name="nginx:latest"
 )
 
-pulumi.export('nginx_ip', nginx_container.ports[0].apply(lambda p: p['host']))
+# Create a Docker container running Nginx
+nginx_container = docker.Container("nginx_container",
+    image=nginx_image.name,
+    ports=[
+        docker.ContainerPortArgs(
+            internal=80,  # Internal container port
+            external=80,  # External host port
+        )
+    ],
+)
+
+# Export the container ID as an output
+pulumi.export("container_id", nginx_container.id)
 ```
 
 `pulumi up`{{exec}}
