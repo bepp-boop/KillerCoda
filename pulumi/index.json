@@ -14,8 +14,8 @@
             "verify": ""
         },
         {
-            "title":"Steps 2",
-            "text":"step2.md",
+            "title":"Deploy a Container",
+            "text":"deploy/text.md",
             "verify": ""
         }
     ],
