@@ -22,6 +22,11 @@
             "text":"deployment/text.md",
             "verify": ""
         }
+        {
+            "title":"Multiple Container Deployments",
+            "text":"extending_deployment/text.md",
+            "verify": ""
+        }
     ],
         "finish": 
         {
