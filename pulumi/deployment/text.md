@@ -6,6 +6,9 @@ We also need this package to be installed on our system. We can install it using
 
 
 
+
+
+
 We would need to generate a new Pulumi project using the following command.
 
 `pulumi new python`{{exec}}
@@ -17,6 +20,10 @@ This will create a new Pulumi project with the following files:
 - `Pulumi.py`: This file contains the Pulumi program.
 
 - `requirements.txt`: This file contains the Python dependencies.
+
+As we using a virtual environment (which is recommended for Python projects), ensure it is activated. You can activate it with
+
+`source venv/bin/activate`{{exec}}
 
 We will install the pulumi_docker package using the following command.
 
