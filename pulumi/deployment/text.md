@@ -1,5 +1,11 @@
 We will used Python to write the Pulumi program. Also we will use the pulumi_docker package to create the Docker image and container.
 
+We also need this package to be installed on our system. We can install it using the following command.
+
+`apt install python3.8-venv`{{exec}}
+
+
+
 We would need to generate a new Pulumi project using the following command.
 
 `pulumi new python`{{exec}}
