@@ -62,7 +62,7 @@ The program will create a Docker image and container. It will also output the co
 ```
 docker images
 docker ps
-curl 127.0.0.1:8000
+curl 127.0.0.1:80
 ```
 
 
