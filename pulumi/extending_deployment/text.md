@@ -37,7 +37,7 @@ redis_container = docker.Container("redis_container",
 # Export the IDs of the containers
 pulumi.export("nginx_container_id", nginx_container.id)
 pulumi.export("redis_container_id", redis_container.id)
-```
+``` 
 
 Let deploy the program once again
 

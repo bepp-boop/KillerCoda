@@ -5,10 +5,6 @@ We also need this package to be installed on our system. We can install it using
 `apt install python3.8-venv`{{exec}}
 
 
-
-
-
-
 We would need to generate a new Pulumi project using the following command.
 
 `pulumi new python`{{exec}}
