@@ -1,14 +1,14 @@
-Check that containerd is running and exposed on your syst
+Verify containerd service status and accessibility:
 `systemctl status containerd --no-pager`{{exec}}
 
-Check that containerd is listening on the default port:
+Confirm containerd is listening on its default port:
 `ss -tulnp | grep containerd`{{exec}}
 
-Made directory for the containerd configuration:
+Create and navigate to the directory for containerd configuration:
 `sudo mkdir -p /root/learn-pulumi-docker-container`{{exec}}
 `cd /root/learn-pulumi-docker-container`{{exec}}
 
-Check if other container is running.
+Check for any running Docker containers:
 `docker ps`{{exec}}
 
 

@@ -9,11 +9,21 @@ We would need to generate a new Pulumi project using the following command.
 
 `pulumi new python`{{exec}}
 
+Pulumi have API keys that are used to authenticate with the Pulumi service. You can create a new API key by visiting the Pulumi console and clicking on the `New Access Token` button. You can then enter a name for the token and click on the `Create` button. This will generate a new API key that you can use to authenticate with the Pulumi service.
+
+I have set up a token for you to use in this tutorial.
+`pul-a58665e22fec1b6808b11da5ae13e4e000957867`{{copy}} 
+(This token is valid for only a week for assign tasks, you should create your own token for your projects)
+
+This would prompt you to enter a project name. You can enter any name you like. For this example, we will use `docker-container`.
+
+Now we will be asked to enter the stack name. A stack is a deployment environment. For this example, we will use `dev`.
+
 This will create a new Pulumi project with the following files:
 
 - `Pulumi.yaml`: This file contains the project configuration.
 
-- `Pulumi.py`: This file contains the Pulumi program.
+- `main.py`: This file contains the Pulumi program.
 
 - `requirements.txt`: This file contains the Python dependencies.
 
