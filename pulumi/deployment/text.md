@@ -63,6 +63,8 @@ pulumi.export("container_id", nginx_container.id)
 
 `pulumi up`{{exec}}
 
+Prompt to ask for confirmation to deploy the stack. Accept yes to update and deploy the stack.
+
 The program will create a Docker image and container. It will also output the container name and port. You can access the nginx server by visiting 
 
 ```
