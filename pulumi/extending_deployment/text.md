@@ -22,20 +22,6 @@ redis_container = docker.Container("redis_container",
     ],
 )
 
-# Define the Nginx Docker image
-nginx_image = docker.RemoteImage("nginx_image", name="nginx:latest")
-
-# Create an Nginx Docker container
-nginx_container = docker.Container("nginx_container",
-    image=nginx_image.name,
-    ports=[
-        docker.ContainerPortArgs(
-            internal=81,
-            external=81,
-        )
-    ],
-)
-
 # Export the IDs of the containers
 pulumi.export("nginx_container_id", nginx_container.id)
 pulumi.export("redis_container_id", redis_container.id)
