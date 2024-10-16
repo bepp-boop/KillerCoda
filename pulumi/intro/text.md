@@ -17,3 +17,4 @@ Pulumi CLI is the command-line interface for Pulumi. It is used to interact with
 
 # PS
 Hey I am finished with the tutorial. I am unable to get to gpg to work cause at least seem like the key is expire so I can not encrypt using the public key block. So I just leave a temporal token access key in the tutorial or that user can create account on Pulumi to generate their own stack.
+

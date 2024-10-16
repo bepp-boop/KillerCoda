@@ -23,7 +23,7 @@ This will create a new Pulumi project with the following files:
 
 - `Pulumi.yaml`: This file contains the project configuration.
 
-- `main.py`: This file contains the Pulumi program.
+- `__main__.py`: This file contains the Pulumi program.
 
 - `requirements.txt`: This file contains the Python dependencies.
 
@@ -35,7 +35,7 @@ We will install the pulumi_docker package using the following command.
 
 `pip install pulumi_docker`{{exec}}
 
-Next, we will write the Pulumi program in the `Pulumi.py` file. The program will create a Docker image and container running an nginx server. The nginx server will be accessible on port 8000.
+Next, we will write the Pulumi program in the `__main__.py` file. The program will create a Docker image and container running an nginx server. The nginx server will be accessible on port 8000.
 
 ```
 import pulumi
